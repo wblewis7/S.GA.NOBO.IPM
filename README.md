@@ -8,9 +8,16 @@ authors: William B. Lewis, Justin A. Rectenwald, D. Clay Sisson, and James A. Ma
 
 # Metadata
 
+# Code_NOBO_IPM_S_GA.R
+
+Code for running the integrated population model in R and NIMBLE is contained in the 'Code_NOBO_IPM_S_GA' R file. The state population model is structured by sex (males and females), age (juveniles, subadults, and adults), and season (breeding season: April - September, non-breeding season: October - March). The biological year starts on April 1st. Subadults surviving to the start of the breeding season transition to adults, and all adults (regardless of sex) survive to each month of the breeding season through a single breeding survival parameter. Adults surviving to the start of each month June-September produce a number of chicks in that month based on the sex-specific per-capita productivity rate. The sex ratio of chicks is assumed to be 50/50. Juveniles from each of the four monthly cohorts (June-September) survive to the start of the non-breeding season based on a cohort-specific juvenile daily survival, an average of 30 days/month, and the number of months between the cohort month and October. Juveniles transition to subadults at the start of the non-breeding season in October. During the non-breeding season, male and female adults and subadults survive each month based on the sex-and-age-specific survival rates. The model is run using parallel processing with 3 cores and can take several days. <br />
+ 
+
+<br />
+
 # S.GA.NOBO.IPM.data.gzip
 
-The data for the northern bobwhite (Colinus virginianus, NOBO) project are stored in the 'S.GA.NOBO.IPM.data' gzip file. These data were collected from 1998 - 2022 at a managed property in southern Geogria, USA. The biological year for the population model was specified as starting on April 1st, with the breeding season extending April - September and the non-breeding season extending from October - March. In the population model, juveniles enter the population in June-September, transition to subadults at the start of the non-breeding season in October, and transition to adults at the start of the subsequent breeding season in April. The data
+The data for the northern bobwhite (Colinus virginianus, NOBO) project are stored in the 'S.GA.NOBO.IPM.data' gzip file. These data were collected from 1998 - 2022 at a managed property in southern Geogria, USA. The data
 comes from 7 main databases: radiotelemetry survival data, monthly productivity data from the breeding season (June-September), November covey count data, trapping (capture) ratio data from November, and harvest ratio data from November and December.
 ## Radiotelemetry survival data
 Males and females were captured annually using baited traps during the late fall and spring. A subset of captured birds were fit with a radiotransmitter and tracked at least twice weekly until either mortality or radito failure. Capture histories were condensed into bi-weekly periods.
@@ -91,12 +98,6 @@ The area (ha) of the survey grids.
 ### phi.j.prior.mean
 The mean daily survival rate of juveniles from the June (1st), July (2nd), August (3rd), and September (4th) monthly breeding cohorts. Estimates are on the logit scale and were taken from Terhune et al. (2019).
 ### phi.j.prior.sd
-The standard deviation for daily survival rates of juveniles. The estimate is on the logit scale and was taken from Terhune et al. (2019). <br />
+The standard deviation for daily survival rates of juveniles. The estimate is on the logit scale and was taken from Terhune et al. (2019).
 
-<br />
-
-
-# Code_NOBO_IPM_S_GA.R
-
-Code for running the integrated population model in R and NIMBLE is contained in the 'Code_NOBO_IPM_SE_GA' R file. 
 
