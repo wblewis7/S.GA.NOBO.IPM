@@ -14,6 +14,7 @@ Code for running the integrated population model in R and NIMBLE is contained in
  
 
 <br />
+<br />
 
 # S.GA.NOBO.IPM.data.gzip
 
@@ -98,6 +99,9 @@ The area (ha) of the survey grids.
 ### phi.j.prior.mean
 The mean daily survival rate of juveniles from the June (1st), July (2nd), August (3rd), and September (4th) monthly breeding cohorts. Estimates are on the logit scale and were taken from Terhune et al. (2019).
 ### phi.j.prior.sd
-The standard deviation for daily survival rates of juveniles. The estimate is on the logit scale and was taken from Terhune et al. (2019).
+The standard deviation for daily survival rates of juveniles. The estimate is on the logit scale and was taken from Terhune et al. (2019). <br />
+
+<br />
+<br />
 
 
