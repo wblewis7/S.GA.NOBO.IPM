@@ -106,4 +106,4 @@ The standard deviation for daily survival rates of juveniles. The estimate is on
 
 # Param_Estimates_NOBO_IPM_S_GA.pdf
 
-Yearly estimates of population parameters from the integrated population model is stored in the 'Param_Estimates_NOBO_IPM_S_GA' pdf. The mean, standard deviation, median, and 95% credible intervals of posterior samples are provided for parameters.
+Yearly estimates of population parameters from the integrated population model is stored in the 'Param_Estimates_NOBO_IPM_S_GA' pdf. The mean, standard deviation, median, and 95% credible intervals of posterior samples are provided for parameters. Included parameters are: population abundance, density, and growth rate for April and November; the daily and overall (hatch month - start of October) juvenile survival rates for each monthly cohort (June - September); 
