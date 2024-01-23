@@ -1,5 +1,5 @@
 # S.GA.NOBO.IPM
-Data, R and NIMBLE code, and table of parameter estimates for integrated population model estimating population dynamics and demographic rates for a population of northern bobwhites (Colinus virginianus) in southern Georgia, USA, 1998-2022.
+Data, R and NIMBLE code, and table of parameter estimates for an integrated population model estimating population dynamics and demographic rates for a population of northern bobwhites (Colinus virginianus) in southern Georgia, USA, 1998-2022.
 ---
 authors: William B. Lewis, Justin A. Rectenwald, D. Clay Sisson, and James A. Martin
 
