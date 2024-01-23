@@ -95,7 +95,7 @@ The years of the study for which December harvest data is available.
 ### harv.ratio.years.Dec.n
 The number of years for which December harvest data is available.
 ### Area
-The area (ha) of the survey grids.
+The total area (ha) of the survey grids.
 ### phi.j.prior.mean
 The mean daily survival rate of juveniles from the June (1st), July (2nd), August (3rd), and September (4th) monthly breeding cohorts. Estimates are on the logit scale and were taken from Terhune et al. (2019).
 ### phi.j.prior.sd
