@@ -14,6 +14,8 @@ str(NOBO.IPM.data)
 # See metadata on GitHub page for description of gzip contents
 
 # Putting model and initial values into function for running in parallel
+#* CRN: What we are missing at present are definitions for each variable/node used within the model code
+
 NOBO_MCMC_code <- function(seed, mod.data, mod.constants, monitors){
   
   require(nimble)
@@ -33,7 +35,7 @@ NOBO_MCMC_code <- function(seed, mod.data, mod.constants, monitors){
     S.nb[2,1,1] <- round(S.n.f[3])
     S.nb[2,2,1] <- round(S.n.f[4])
     
-    # Informative prior for covey size and availability, both vary by year
+    # Informative priors for covey size and availability, both vary by year
     for (q in 1:nyears){
       covey.size[q] ~ T(dnorm(csize.mean[q], sd=csize.sd[q]), csize.min, csize.max)
       availability.logit[q] ~ T(dnorm(avail.mean[q], sd=avail.sd[q]), avail.min, avail.max)
@@ -104,9 +106,13 @@ NOBO_MCMC_code <- function(seed, mod.data, mod.constants, monitors){
         prod.year.hyper.log.sd[u,o] ~ dunif(0, 100)
       }
     }
+    #* CRN: Is there a reason for changing the index letters for sexes and ages?
+    #* First, you use e and f, then u and o. This is personal preference, but I think it 
+    #* becomes easier to read code when using the same letters for the same type of loop. 
+    #* This also goes for the time loop, which was d so far but becomes t below. 
     
     ##############################################################################
-    # State Process
+    # State Process (Population model)
     ##############################################################################
     
     
